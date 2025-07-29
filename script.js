@@ -15,6 +15,7 @@ const gameStart = function () {
   let continuePlaying = true;
 
   while (continuePlaying) {
+
     let playerChoice = window.prompt('Choose R, P or S...');
 
     if (!playerChoice) {
@@ -36,7 +37,7 @@ const gameStart = function () {
       const cpuMath = Math.floor(Math.random() * options.length);
       const cpuChoice = options[cpuMath];
 
-      window.alert(`CPU choses ${cpuChoice}`);
+      window.alert(`CPU chooses ${cpuChoice}`);
 
       if (playerChoice === cpuChoice) {
         stats.ties++;
@@ -62,9 +63,9 @@ const gameStart = function () {
   Ties: ${stats.ties}
   
   Player Choices:
-  Rock: ${stats.rock}
-  Paper: ${stats.paper}
-  Scissors: ${stats.scissors}`);
+  Rock: ${stats.count.rock}
+  Paper: ${stats.count.paper}
+  Scissors: ${stats.count.scissors}`);
 
 };
 
